@@ -7,8 +7,8 @@ int main()
     /*Section I Begins*/
     string a;
     string b;
-    a = "Hello ";
-    b = "World!";
+    a = " Hello";
+    b = " World!";
     cout << a <<",";
     cout << a;
     cout << b <<endl;
