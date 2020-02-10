@@ -8,10 +8,10 @@ int main ()
     string lname;
     fname= "Kelia";
     lname= "Morrah";
-    cout << "************" <<end1;
+    cout << "************" << endl;
     cout << lname << ",";
-    cout << fname <<end1;
-    cout << "************";
-    
+    cout << fname << endl;
+    cout << "************" << endl;
+
 return 0;
 }
