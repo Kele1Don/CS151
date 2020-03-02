@@ -68,14 +68,13 @@ int main()
     cout << "20. smv <- 15\n";
     cout << "21. output <- out\n";
     cout << "22. return <- 0\n\n";
-    cout << "23. All Done\n";
+
     
     cout << "out\n";
     cout << "Enter value for x1: \n";
     cout << "Enter value for x2: \n";
     cout << "Enter value for x3: \n";
     cout << "Enter value for x4: \n";
-    cout << "Result:15 \n";
-    cout << "All Done\n";
+    cout << "Result:15 \n\n";
     return 0;
 }
