@@ -46,12 +46,36 @@ int main()
 
     cout << "\nSection III\n";
     /*Section III Begins*/
-    
+    char val;
+
+    cout << "Enter a character: ";
+    cin >> val;
+
+    if ((val == 'a') || (val == 'e') || (val == 'i') || (val == 'o') || (val == 'u'))
+    {
+        cout << val << " is a vowel.";
+    }
+    else 
+    {
+        cout << val << " is not a vowel.";
+    }
     /*Section III Ends*/
 
     cout << "\nSection IV\n";
     /*Section IV Begins*/
+    int grad;
 
+    cout << "Enter your grade out of 100: ";
+    cin >> grad;
+
+    if (grad >= 65)
+    {
+        cout << "You passed.\n";
+    }
+    else 
+    {
+        cout << "You failed.\n";
+    }
     /*Section IV Ends*/
 
     return 0;
