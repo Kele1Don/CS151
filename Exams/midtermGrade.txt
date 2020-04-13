@@ -1,0 +1,7 @@
+Section     Grade
+I           4
+II          4.50
+III         3
+IV          4
+====================
+Total       15.50
