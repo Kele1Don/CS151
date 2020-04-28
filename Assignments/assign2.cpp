@@ -49,14 +49,15 @@ bool IsIsoscelesTriangle (double a, double b, double c)
 {
     if (a>0 && b>0 && c>0)
     {
-        bool d= ((a==b && b==c) || (b==c && a==c) || (a==c && a==b));
-
-        return d;
+        if((a==b && b==c) || (b==c && a==c) || (a==c && a==b))
+        {
+            return true;
+        }
     }
 
     else 
     {
-        return "False";
+        return false;
     }
 }
 
@@ -74,14 +75,15 @@ bool ConsecutiveOdd(int x, int y)
 {
     if (x%2 !=0 && y%2 !=0)
     {
-        bool d= (x-y==2 || y-x==2);
-
-        return d;
+        if(x-y==2 || y-x==2)
+        {
+            return true;
+        }
     }
 
     else 
     {
-        return "False";
+        return false;
     }
 } 
 
@@ -89,10 +91,7 @@ int NextLeapYear(int year)
 {
     if (year%2==0)
     {
-        if ((year/4 && !year/100) || (year/4 && year/100 && year/400))
-        {
-            cout<< year+4;
-        }
+        return year+4;
     }
 
     else
@@ -234,208 +233,24 @@ string DayOfTheWeek(int x)
     }
 }
 
-double Median(double a, double b, double c, double d)
+double Median(double d1, double d2, double d3, double d4)
 {
-   int t;
-    if (b>a>c>d)
+   double d[] = {d1, d2, d3, d4};
+    for(int i = 0; i < 4; i++)
     {
-        
-        t=a;
-        a=b;
-        b=t;  
+        for(int j = i + 1; j < 4; j++)
+        {
+            if(d[i] > d[j])
+            {
+                double tmp = d[i];
+                d[i] = d[j];
+                d[j] = tmp;
+            }
+        }
     }
 
-    else if (c>a>b>d)
-    {
-        
-        t=a;
-        a=c;
-        c=b;
-        b=t;
-    }
+    return (d[1] + d[2]) / 2;
 
-    else if (d>a>b>c)
-    {
-        
-        t=a;
-        a=d;
-        d=c;
-        c=b;
-        b=t;
-
-    }
-
-    else if (b>c>d>a)
-    {
-        
-        t=a;
-        a=b;
-        b=c;
-        c=d;
-        d=t;  
-    }
-
-    else if (c>b>d>a)
-    {
-        
-        t=a;
-        a=c;
-        c=d;
-        d=t;
-    }
-
-    else if (d>b>c>a)
-    {
-        
-        t=a;
-        a=d;
-        d=t;
-
-    }
-
-    else if (b>c>a>d)
-    {
-        t=a;
-        a=b;
-        b=c;
-        c=t;
-    }
-
-    else if (c>b>a>d)
-    {
-        t=a;
-        a=c;
-        c=t;
-    }
-
-    else if (d>c>a>b)
-    {
-        t=a;
-        a=d;
-        d=b;
-        b=c;
-        c=t;
-    }
-
-    else if (a>c>d>b)
-    {
-        t=b;
-        b=c;
-        c=d;
-        d=t;
-    }
-
-    else if (a>c>b>d)
-    {
-        t=b;
-        b=c;
-        c=t;
-    }
-
-    else if (a>b>d>c)
-    {
-        t=d;
-        d=c;
-        c=t;
-    }
-
-    else if (b>a>d>c)
-    {
-        t=a;
-        a=b;
-        b=t;
-        t=d;
-        d=c;
-        c=t;
-    }
-
-    else if (c>d>b>a)
-    {
-        t=a;
-        a=c;
-        c=b;
-        b=d;
-        d=t;
-    }
-
-    else if(d>b>a>c)
-    {
-        t=a;
-        a=d;
-        d=c;
-        c=t;
-    }
-
-    else if (a>d>b>c)
-    {
-        t=d;
-        d=c;
-        c=b;
-        b=t;
-    }
-
-    else if (b>d>a>c)
-    {
-        t=a;
-        a=b;
-        b=d;
-        d=c;
-        c=t;
-    }
-
-    else if (c>a>d>b)
-    {
-        t=a;
-        a=c;
-        c=d;
-        d=b;
-        b=t;
-    }
-
-    else if (d>c>b>a)
-    {
-        t=a;
-        a=d;
-        d=t;
-        t=c;
-        c=b;
-        b=t;
-    }
-
-    else if (a>d>c>b)
-    {
-        t=d;
-        d=b;
-        b=t;
-    }
-
-    else if (b>d>c>a)
-    {
-        t=a;
-        a=b;
-        b=d;
-        d=t;
-    }
-
-    else if (c>d>a>b)
-    {
-        t=a;
-        a=c;
-        c=t;
-        t=d;
-        d=b;
-        b=t;
-    }
-
-    else if (d>a>c>b)
-    {
-        t=a;
-        a=d;
-        d=b;
-        b=t;
-    }
-
-    return (b+c)/2;
 }
 
 double Minimum(double w, double x, double y, double z)
@@ -508,6 +323,7 @@ double NonNegativeMean(double n[])
    {
        return 0;
    }
+
    else
    {
        return total/count;
@@ -518,7 +334,24 @@ return 0;
 
 void Permutation(int a, int b, int c, int d)
 {
-    
+    int A[] = {a, b, c, d};
+    for(int i = 0; i < 4; i++)
+    {
+        for(int j = 0; j < 4; j++)
+        {
+            for(int k = 0; k < 4; k++)
+            {
+                for(int l = 0; l < 4; l++)
+                {
+                    if(i != j && i != k && i != l && j != k && j != l && k != l)
+                    {
+                        cout<<"["<<A[i]<<", "<<A[j]<<", "<<A[k]<<", "<<A[l]<<"]"<<endl;
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 void Sort(double a, double b, double c, double d, double e)
@@ -528,28 +361,74 @@ void Sort(double a, double b, double c, double d, double e)
 
 string FirstDayOfTheYear(int year)
 {
-
-    int day=2;
-    if (year>=1900 && year<=9999)
+    if(year<1900 || year>9999)
     {
-        for(int count=1; year<=9999; year++)
-        {
-            for (int count=1; count<=4; count++ )
-            {   
-                year+=1;
-                day+=1;
-            }
+        return "Cannot determine";
+    }
 
-            day+=2;
+    int month = 1;
+    int day = 1;
+    int oddDays;
+    int monthOdd[] = {0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4};
+    
+    
+    year = year -1;
+  
+    oddDays = year + year/4 + year/400 - year/100;
+    oddDays += monthOdd[month - 1] + day;
+    oddDays = oddDays % 7;
+
+    return DayOfTheWeek(oddDays);
+    
+}
+
+double TemperatureConverter(double Temp, char From, char To)
+{
+
+    if(From=='F' || From=='f')
+    {
+
+        if(To=='C' || From=='c')
+        {
+            return (Temp - 32) * 5/9.0;
+        }
+        else if(To=='K' || To=='k')
+
+        return (Temp - 32) * 5/9.0 + 273.15;
+
+    }
+
+    else if(From=='C' || From=='c')
+    {
+
+        if(To=='F' || To=='f')
+
+        return Temp * (9/5.0) + 32;
+
+        else if(To=='K' || To=='k')
+
+        return Temp + 273.15;
+
+    }
+
+    else if(From=='K' || From=='k')
+    {
+
+        if(To=='F' || To=='f')
+        {
+            return (Temp - 273.15) * 9/5.0 +32;
         }
 
-       return DayOfTheWeek(day);
+    else if(To=='C' || To=='c')
+    {
+        return Temp - 273.15;
+
     }
 
-    else 
-    {
-        return "Cannot determine.";
     }
+
+    return Temp;
+
 }
 
 
@@ -584,7 +463,7 @@ int main()
     //Even or Odd
 
     int num;
-    cout<<"Enter a number: ";
+    cout<<"\nEnter a number: ";
     cin>>num;
     cout<<"The number "<<num<<" "<<IsEvenOrOdd(num);
     cout<<endl;
@@ -592,7 +471,7 @@ int main()
     //Polynomial
 
     double w,v,u,z;
-    cout << "Enter the polynomial you want to evaluate: ";
+    cout << "\nEnter the polynomial you want to evaluate: ";
     cin>>w>>v>>u>>z;
 
     cout<<"The evaluation is: "<<Polynomial(w, v, u, z);
@@ -600,27 +479,28 @@ int main()
 
     //Square
 
+    cout<<endl;
     cout<<Square();
     cout<<endl;
 
     //Isosceles Triangle
 
     double point1,point2,point3;
-    cout<<"Enter 3 points and I will determine it they make an Isosceles triangle: ";
+    cout<<"\nEnter 3 points and I will determine it they make an Isosceles triangle: ";
     cin>>point1>>point2>>point3;
 
     cout<<IsIsoscelesTriangle(point1, point2, point3);
     cout<<endl;
 
     //Echo
-
+    cout<<endl;
     cout<<Echo();
     cout<<endl;
 
     // Consecutive Odd number
 
     int odd1,odd2;
-    cout << "Enter two odd numbers and I will let you know if they are consecutive: ";
+    cout << "\nEnter two odd numbers and I will let you know if they are consecutive: ";
     cin>>odd1>>odd2;
     cout<<ConsecutiveOdd(odd1, odd2);
     cout<<endl;
@@ -637,7 +517,7 @@ int main()
     //Rearrange Characters
 
     char c1,c2,c3;
-    cout <<"Enter three characters: ";
+    cout <<"\nEnter three characters: ";
     cin>>c1>>c2>>c3;
     cout<<"At first they were in this order: "<<c1<<endl<<c2<<endl<<c3<<endl;
     cout<<"Now they are in this order: ";
@@ -647,7 +527,7 @@ int main()
     //Numerical swap
 
     double x, y;
-    cout<<"Enter two numbers: ";
+    cout<<"\nEnter two numbers: ";
     cin>>x>>y;
     cout << "\nBefore swapping" << endl;
     cout << "x = " << x << endl;
@@ -693,7 +573,7 @@ int main()
     //Median
     int n1,n2,n3,n4;
 
-    cout<<"\nEnter four numbers: ";
+    cout<<"\nEnter four numbers and I'll tell you the median: ";
     cin>>n1>>n2>>n3>>n4;
 
     cout<<"The median of the four numbers:\n"<<n1<<","<<n2<<","<<n3<<" and "<<n4;
@@ -702,7 +582,7 @@ int main()
 
     //Minimum
     double mp1,mp2,mp3,mp4;
-    cout<<"\nEnter four numbers: ";
+    cout<<"\nEnter four numbers in any order and I'll tell you the minimum: ";
     cin>>mp1>>mp2>>mp3>>mp4;
     cout<<"The minimum value of the four numbers is: ";
     cout<<Minimum(mp1, mp2, mp3, mp4)<<endl;
@@ -710,7 +590,7 @@ int main()
 
     //Color Code
     int clr;
-    cout<<"\nEnter a number: ";
+    cout<<"\nEnter a number and I'll match it with a color: ";
     cin>>clr;
     cout<<"That number is the code for ";
     cout<<ColorCode(clr)<<endl;
@@ -718,7 +598,7 @@ int main()
     //NonNegativeMean
 
     double q[5];
-    cout<<"\nEnter 5 Numbers: ";
+    cout<<"\nEnter 5 Numbers and I'll give you the mean: ";
     for(int i=0;i<5;i++)
     {
         cin>>n[i];
@@ -728,18 +608,28 @@ int main()
 
 
     //Permutation
-    
+    int p1,p2,p3,p4;
+
+    cout<<"\nEnter four numbers and I will provide all the combinations of them: ";
+    cin>>p1>>p2>>p3>>p4;
+
+    cout<<"\nThe combinations are: "<<endl;
+    Permutation(p1, p2, p3, p4);
+    cout<<endl;
 
     //Sort
 
     //First day of the year
 
     int yr;
-    cout <<"\nEnter a year and I'll tell you what was the first day of that year: ";
-    cin>> yr;
-    cout <<FirstDayOfTheYear(yr); 
-    cout<<endl;
 
+    cout<<"\nEnter a year and I'll tell you what day of the week it started on: ";
+    cin>>yr;
+    string weekDay = FirstDayOfTheYear(yr);
+
+    cout<<"The first day of the year is: "<<weekDay;
+    cout<<endl;
+  
     //Temperature Converter
     
 
