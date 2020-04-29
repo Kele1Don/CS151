@@ -1,0 +1,124 @@
+Fundamentals:
+A) int D(int a, int b)
+{
+    if (a<b)
+    {
+        return b-a;
+    }
+
+    else if (b<a)
+    {
+        return a-b;
+    }
+}
+
+B) for (;;)
+    {
+        cout<< "Never Surrendeer";
+    }
+
+c)  bool T(int &y)
+    {
+        y= 3*y;
+
+        if (y%6==0)
+        {
+            return "True";
+        }
+
+        else
+        {
+            return "False";
+        }
+    }
+
+d)  for (int odd=99;(odd<100 && odd>=1); odd-=2)
+    {
+        cout<< odd<<endl;
+    }
+
+e)  double A(double par)
+    {
+        int input;
+        int count=1;
+        for(;count>=1;count++)
+        {
+            cout<<"Enter a number: ";
+            cin>> input;
+            cout<<"When you are finished, enter 789";
+            if (input==789)
+            {
+                break;
+            }
+        }
+
+        return input/count
+    }
+
+Problem Solving:
+
+void TimesTable(int t)
+{
+    if (t>0 && t<=833)
+    {   
+        int table[12];
+        int start=0001;
+        int end=0012;
+        cout<<string();
+        for (int b=start; b<=end; b++)
+        {
+            int row1=start;
+            for(; row1<=end; row1++)
+            {
+                cout<<row1<<string();
+            }
+
+            int col1=start;
+            for (;col1<=end; col1++ )
+            {
+                cout <<col1<<endl;
+            }
+
+        
+        
+            cout<<(row1*col1)<<string();
+        }
+    }
+}
+
+
+Tracing:
+
+cout<<"Trace Table\n";
+cout<<"01. b <- 4 \n";
+cout<<"02. a <- 372.5 \n";
+cout<<"03. b<=1 || a<1 <- false \n";
+cout<<"04. a==1 <- false \n";
+cout<<"05. i <- 1 \n";
+cout<<"06. c <- 0 \n";
+cout<<"07. a>i*b <- true \n";
+cout<<"08. i <- 4 \n";
+cout<<"09. c <- 1 \n";
+cout<<"10. a>i*b <- true \n";
+cout<<"11. i <- 16 \n";
+cout<<"12. c <- 2 \n";
+cout<<"13. a>i*b <- true \n";
+cout<<"14. i <- 64 \n";
+cout<<"15. c <- 3 \n";
+cout<<"16. a>i*b <- true \n";
+cout<<"17. i <- 256 \n";
+cout<<"18. c <- 4 \n";
+cout<<"19. a>i*b <- false \n";
+cout<<"20. return 5 \n";
+
+Debugging:
+
+03 int c=0;
+07 n= n/b;
+10 return c;
+13 bool IP(int p)
+15 for (int i=2; i*i <p; i+=1)
+22 return true;
+25 void Pf (int n)
+27 int m= (n<0)
+32 if (IP (p) && m%p==0)
