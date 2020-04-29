@@ -120,5 +120,6 @@ Debugging:
 15 for (int i=2; i*i <p; i+=1)
 22 return true;
 25 void Pf (int n)
-27 int m= (n<0)
 32 if (IP (p) && m%p==0)
+34 int c=CF(m,p);
+42 p+=1;
