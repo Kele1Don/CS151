@@ -1,4 +1,5 @@
 Fundamentals:
+
 A) int D(int a, int b)
 {
     if (a<b)
@@ -57,33 +58,58 @@ e)  double A(double par)
 
 Problem Solving:
 
+string fmt(int x) //Places the number in the format of 4 spaces
+{
+    string rtn = to_string(x);//Changes int to str
+    if (rtn.length()<4)
+    {
+        rtn= string(4- rtn.length(), '0')+ rtn;
+    }
+    
+    return rtn;
+}
+
 void TimesTable(int t)
 {
-    if (t>0 && t<=833)
+    if (t>0 && t<=833) //Checks if the table should be printed
     {   
-        int table[12];
-        int start=0001;
-        int end=0012;
-        cout<<string();
-        for (int b=start; b<=end; b++)
+        cout<<"\t"; //horizontal tab
+        for (int b=1; b<=12; b++) //Prints the header/ horizontal row one
         {
-            int row1=start;
-            for(; row1<=end; row1++)
-            {
-                cout<<row1<<string();
-            }
+            cout<<fmt(b)<<" ";
 
-            int col1=start;
-            for (;col1<=end; col1++ )
-            {
-                cout <<col1<<endl;
-            }
-
-        
-        
-            cout<<(row1*col1)<<string();
         }
+
+        cout<<endl;
+
+        int multi=0;
+        for (int c=1; c<=t; c++) //Prints out the rows
+        {
+            cout<<"   "<<fmt(c)<<" ";
+
+            for (int d=1; d<=12; d++) //Prints out the columns
+            {
+                multi=c*d;
+                cout<<fmt(multi)<<" ";
+            }
+
+            cout<<endl;
+        }
+
     }
+}
+
+
+
+int main()
+{
+    int num;
+    cout<<"Enter a number: ";
+    cin>>num;
+
+    TimesTable(num);
+
+    return 0;
 }
 
 
