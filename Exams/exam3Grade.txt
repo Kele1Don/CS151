@@ -1,8 +1,8 @@
 Section     Grade
-I           4.55
-II          4.90
+I           4.75
+II          5.00
 III         4.95
 IV          5.00
 ====================
-Total      19.40
+Total      19.70
 
