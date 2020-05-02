@@ -42,18 +42,11 @@ e)  double A(double par)
     {
         int input;
         int count=1;
-        for(;count>=1;count++)
-        {
-            cout<<"Enter a number: ";
-            cin>> input;
-            cout<<"When you are finished, enter 789";
-            if (input==789)
-            {
-                break;
-            }
-        }
-
-        return input/count
+        
+        cout<<"Enter a number: ";
+        cin>>input;
+        
+        return input/count;
     }
 
 Problem Solving:
@@ -73,7 +66,7 @@ void TimesTable(int t)
 {
     if (t>0 && t<=833) //Checks if the table should be printed
     {   
-        cout<<"\t"; //horizontal tab
+        cout<<"     "; //horizontal tab
         for (int b=1; b<=12; b++) //Prints the header/ horizontal row one
         {
             cout<<fmt(b)<<" ";
