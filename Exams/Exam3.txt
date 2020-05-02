@@ -110,25 +110,25 @@ Tracing:
 
 cout<<"Trace Table\n";
 cout<<"01. b <- 4 \n";
-cout<<"02. a <- 372.5 \n";
-cout<<"03. b<=1 || a<1 <- false \n";
-cout<<"04. a==1 <- false \n";
-cout<<"05. i <- 1 \n";
-cout<<"06. c <- 0 \n";
-cout<<"07. a>i*b <- true \n";
-cout<<"08. i <- 4 \n";
-cout<<"09. c <- 1 \n";
-cout<<"10. a>i*b <- true \n";
-cout<<"11. i <- 16 \n";
-cout<<"12. c <- 2 \n";
-cout<<"13. a>i*b <- true \n";
-cout<<"14. i <- 64 \n";
-cout<<"15. c <- 3 \n";
-cout<<"16. a>i*b <- true \n";
-cout<<"17. i <- 256 \n";
-cout<<"18. c <- 4 \n";
-cout<<"19. a>i*b <- false \n";
-cout<<"20. return 5 \n";
+cout<<" a <- 372.5 \n";
+cout<<"02. b<=1 || a<1 <- false \n";
+cout<<"03. a==1 <- false \n";
+cout<<"04. i <- 1 \n";
+cout<<"05. c <- 0 \n";
+cout<<"06. a>i*b <- true \n";
+cout<<"07. i <- 4 \n";
+cout<<"08. c <- 1 \n";
+cout<<"09. a>i*b <- true \n";
+cout<<"10. i <- 16 \n";
+cout<<"11. c <- 2 \n";
+cout<<"12. a>i*b <- true \n";
+cout<<"13. i <- 64 \n";
+cout<<"14. c <- 3 \n";
+cout<<"15. a>i*b <- true \n";
+cout<<"16. i <- 256 \n";
+cout<<"17. c <- 4 \n";
+cout<<"18. a>i*b <- false \n";
+cout<<"19. return 5 \n";
 
 Debugging:
 
