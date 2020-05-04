@@ -15,7 +15,7 @@ A) int D(int a, int b)
 
 B) for (;;)
     {
-        cout<< "Never Surrendeer";
+        cout<< "Never Surrender";
     }
 
 c)  bool T(int &y)
@@ -41,12 +41,11 @@ d)  for (int odd=99;(odd<100 && odd>=1); odd-=2)
 e)  double A(double par)
     {
         int input;
-        int count=1;
         
         cout<<"Enter a number: ";
         cin>>input;
         
-        return input/count;
+        return input/par;
     }
 
 Problem Solving:
