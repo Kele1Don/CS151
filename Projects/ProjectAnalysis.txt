@@ -1,0 +1,16 @@
+Wheel Of Fortune requirements:
+
+Libraries iostream,cstdlib,ctime,fstream
+int array for wheeel
+int array for different games
+the random function
+double array for for score
+string array for the board
+double variable for money earned
+move function (player menu and choice)
+bool variable spinning of the wheel 
+int variable of the spin
+long variable getting time
+long variable for overall time
+string variable player solve
+bool variable for winning
