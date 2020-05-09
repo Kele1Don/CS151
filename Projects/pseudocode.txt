@@ -1,0 +1,110 @@
+This program will allow the user to play a game of wheel of fortune.
+
+Declare string Player;
+Initialize integer playermoney=0;
+
+Print “****Wheel Of Fortune****” new line after this;
+Print “What is your name? ”;
+Read Player;
+Print “Welcome ”;
+Print Player;
+Print “!” in new line;
+
+Declare int wheel[24] //Each element will hold different values of the wheel;
+Declare int rounds[4];
+Declare int score[3];
+Declare string board[4];
+Function Move (Declare int playermenu , char playerchoice);
+Declare bool spinwheel //might go bankrupt;
+Initialize long time= time(NULL) //to get time;
+Declare string playersolving;
+
+Initialize bool playing= true;
+Initialize bool win=false;
+Initialize int playerspins=0;
+Initialize char phrase[phrase.length()];
+
+for (Initialize c=0; c < phrase.length(); c++);
+{
+    Phrase[i] = ‘-‘;
+}
+
+while (playing == true && win == false)
+{
+    if (player has not spinned as yet) then
+    {
+        Print"Let's begin with a spin!" in new line;
+        Let menu=2;
+        for (Initialize c=0; c < phrase.length(); c++);
+        {
+            Let Phrase[i] = ‘-‘;
+        }
+
+    }
+
+    else
+    {
+        Print "-----What would you like to do?-----" in new line;
+        Print " 1) Guess a letter?" in new line;
+        Print " 2) Spin the wheel?" in new line;
+        Print " 3) Buy a vowel for $250?" in new line;
+        Print " 4) Solve?" in new line;
+
+    }
+
+    if (Player menu = 1) then
+    {
+        Print "Guess a letter: " in new line;
+        Read choice;
+    }
+
+    if (Player menu = 2 ) then
+    {
+        Print "Spin the wheel..." in new line;
+        playerspins+=1;
+        Make spin random by 20%;
+        Print "The wheel landed on $"; 
+        Print wheel[spin];
+        Print new line;
+    }
+
+    if (Player menu = 3) then
+    {
+        Subtract 250 from money for the vowel;
+        Print "Choose a vowel: " in new line;
+        Read choice;
+        Print "Your balance is now $";
+        Print money;
+    }
+
+    if (Player menu = 4) then
+    {
+        Print " Go ahead a solve: ";
+        Read playersolving;
+        
+        if (Player got the phrase right)
+        {
+            Print "That is correct!" in new line;
+            Let win = true;
+            Let playing = false;
+
+        }
+    }
+
+    if (Player did not guess the phrase right ) then 
+    {
+        Print "Oof! The phrase is ";
+        Print phrase;
+        Print new line;
+    }
+
+
+}
+
+if (The player won) then
+{
+    Print "Congratualations on winning ";
+    Print money;
+    Print " on The Wheel of Fortune!";
+    Print "Thank you for playing!" in new line; 
+}
